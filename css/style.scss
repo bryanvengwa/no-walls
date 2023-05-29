@@ -9,305 +9,89 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
-    overflow-x: hidden;
-    font-family: 'balooRegular';
-    color: var(--blue);
-    // scroll-padding: 40px;
+body { overflow-x: hidden; font-family: 'balooRegular'; color: var(--blue);
+    
 }
 
-:root {
-    --orange: #CD7E50;
-    --blue: #0A3140;
-    --dark-blue: #061F27;
-    --light-blue: #153e52;
-    --bg: #13394d;
-    --white: #fff;
-    --off-white: #eeeff1;
+:root { --orange: #CD7E50; --blue: #0A3140; --dark-blue: #061F27; --light-blue: #153e52; --bg: #13394d; --white: #fff; --off-white: #eeeff1;
 }
 
-// ***************************************
-// **************** N A V ****************
-// ***************************************
 
-header {
-    width: 100%;
-    padding: 0 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // position: fixed;
-    // background: var(--white);
 
-    .logo {
-        width: 25%;
-
-        img {
-            width: 100%;
+header { width: 100%; padding: 0 50px; display: flex; align-items: center; justify-content: space-between;
+.logo { width: 25%;img {width: 100%;}}
+.hamburger { display: none; }
+.nav-bar { ul {  display: flex;
+li { a { display: block; color: var(--dark-blue); font-family: 'balooBold'; font-size: 24px; padding: 0 30px; transition: .3s ease-in-out; text-decoration: none; }
+ a:hover { color: var(--orange);     }     }
         }
     }
+}
 
-    .hamburger {
-        display: none;
+#hero { padding: 40px 50px;
+.textBox {
+        h1 { font-family: 'balooBold'; font-size: 100px; line-height: 1;
+        }
+h2 { font-family: 'balooBold'; font-size: 60px; line-height: 1;
+span { color: var(--orange);}}
+p { font-family: 'balooBold'; font-size: 20px; display: flex; gap: 20px; align-items: center;
+&::before { content: ""; width: 100px; height: 3px; background: var(--orange); display: block; }}}
+.imgBox { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; align-items: flex-end;
+.img { width: 100%; img {  width: 100%;  -webkit-box-reflect: below 10px linear-gradient(transparent, #0001); }
+        }
+.img-2 { grid-column-start: 1; grid-row-start: 2;}
+.img-3 {grid-row: span 2;}
+.img-4 { grid-column-start: 3; grid-row-start: 2;}
+.img-5 {grid-row: span 2; }}
+
+}
+
+
+#about { padding: 0 80px; margin-top: 10rem; display: flex; align-items: center; justify-content: center; gap: 50px;
+.text { width: 100%;
+h2 { color: var(--orange); font-family: 'balooBold'; font-size: 50px; line-height: 1;}
+p { font-size: 18px; margin-top: 50px;}
     }
+    .img { width: 100%;
+    img {width: 100%;}
+    }
+}
 
-    .nav-bar {
-        ul {
-            display: flex;
 
-            li {
-                a {
-                    display: block;
-                    color: var(--dark-blue);
-                    font-family: 'balooBold';
-                    font-size: 24px;
-                    padding: 0 30px;
-                    transition: .3s ease-in-out;
-                    text-decoration: none;
+#services { background: var(--bg); color: var(--white); padding: 80px 60px; margin-top: 10rem;
+h2 { font-family: 'balooBold'; font-size: 50px; line-height: 1; }
+.services-wrapper {margin-top: 80px;
+.card { background: var(--light-blue); padding: 10px; box-shadow: 0px 0px 5px var(--bg);
+       img { width: 100%; }
+ .text {  padding-inline: 5px;
+ h3 { color: var(--orange); border-bottom: 1px solid var(--orange); font-family: 'balooBold'; font-size: 26px; padding-block: 10px;
                 }
-
-                a:hover {
-                    color: var(--orange);
-                }
-            }
+ p { font-size: 16px; margin-block: 18px;
+                }}
         }
-    }
-
-}
-
-// ***************************************
-// **************** H E R O ****************
-// ***************************************
-
-#hero {
-    padding: 40px 50px;
-
-    .textBox {
-        h1 {
-            font-family: 'balooBold';
-            font-size: 100px;
-            line-height: 1;
-        }
-
-        h2 {
-            font-family: 'balooBold';
-            font-size: 60px;
-            line-height: 1;
-
-            span {
-                color: var(--orange);
-            }
-        }
-
-        p {
-            font-family: 'balooBold';
-            font-size: 20px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-
-            &::before {
-                content: "";
-                width: 100px;
-                height: 3px;
-                background: var(--orange);
-                display: block;
-            }
-        }
-    }
-
-    .imgBox {
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-        align-items: flex-end;
-        
-
-        .img {
-            width: 100%;
-
-            img {
-                width: 100%;
-                -webkit-box-reflect: below 10px linear-gradient(transparent, #0001);
-            }
-        }
-
-        .img-2 {
-            grid-column-start: 1;
-            grid-row-start: 2;
-        }
-
-        .img-3 {
-            grid-row: span 2;
-        }
-
-        .img-4 {
-            grid-column-start: 3;
-            grid-row-start: 2;
-        }
-
-        .img-5 {
-            grid-row: span 2;
-        }
-    }
-
-}
-
-// ***************************************
-// **************** A B O U T ****************
-// ***************************************
-
-#about {
-    padding: 0 80px;
-    margin-top: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-
-    .text {
-        width: 100%;
-
-        h2 {
-            color: var(--orange);
-            font-family: 'balooBold';
-            font-size: 50px;
-            line-height: 1;
-        }
-
-        p {
-            font-size: 18px;
-            margin-top: 50px;
-        }
-    }
-
-    .img {
-        width: 100%;
-
-        img {
-            width: 100%;
+.card:hover{  background: var(--off-white);  color: var(--dark-blue);  padding: 15px;
+          
         }
     }
 }
 
-// **************************************************
-// **************** S E R V I C E S ****************
-// **************************************************
 
-#services {
-    background: var(--bg);
-    color: var(--white);
-    padding: 80px 60px;
-    margin-top: 10rem;
+#subscription { display: flex; align-items: center; justify-content: center; gap: 70px; padding-inline: 80px; margin-top: 10rem;
 
-    h2 {
-        font-family: 'balooBold';
-        font-size: 50px;
-        line-height: 1;
+    .text { width: 100%;
+        h2 { font-family: 'balooBold'; color: var(--orange); font-size: 40px; line-height: 1; margin-bottom: 50px;
+        }
+ a { background: var(--bg); font-family: 'balooSemiBold'; color: var(--white); padding: 10px 50px; font-size: 24px; text-decoration: none;
+        }
     }
 
-    .services-wrapper {
-        margin-top: 80px;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        // gap: 50px;
-        // width: 100%;
-
-        .card {
-            background: var(--light-blue);
-            padding: 10px;
-            // width: 100%;
-            // margin-inline: 10px;
-            // margin-right: 400px;
-            box-shadow: 0px 0px 5px var(--bg);
-            transition: .3s ease-in-out;
-
-            img {
-                width: 100%;
-            }
-
-            .text {
-                padding-inline: 5px;
-
-                h3 {
-                    color: var(--orange);
-                    border-bottom: 1px solid var(--orange);
-                    font-family: 'balooBold';
-                    font-size: 26px;
-                    padding-block: 10px;
-                }
-
-                p {
-                    font-size: 16px;
-                    margin-block: 18px;
-                }
-            }
-        }
-        .card:hover{
-            background: var(--off-white);
-            color: var(--dark-blue);
-            padding: 15px;
-            // position: fixed;
-        }
+    .img { width: 100%;
+    img { width: 100%; }
     }
 }
 
-// **************************************************
-// **************** S U B S C R I P T I O N ****************
-// **************************************************
 
-#subscription {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-    padding-inline: 80px;
-    margin-top: 10rem;
-
-    .text {
-        width: 100%;
-        h2 {
-            font-family: 'balooBold';
-            color: var(--orange);
-            font-size: 40px;
-            line-height: 1;
-            margin-bottom: 50px;
-        }
-
-        a {
-            background: var(--bg);
-            font-family: 'balooSemiBold';
-            color: var(--white);
-            padding: 10px 50px;
-            font-size: 24px;
-            text-decoration: none;
-        }
-    }
-
-    .img {
-        width: 100%;
-
-        img {
-            width: 100%;
-        }
-    }
-}
-
-// **************************************************
-// **************** C O N T A C T ****************
-// **************************************************
-
-#contact {
-    margin-top: 10rem;
-    background: var(--off-white);
-    padding: 60px 80px 0px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15rem;
+#contact { margin-top: 10rem; background: var(--off-white); padding: 60px 80px 0px 80px; display: flex; align-items: center; justify-content: space-between; gap: 15rem;
 
     .img {
         width: 100%;
@@ -359,28 +143,14 @@ header {
     }
 }
 
-// **************************************************
-// **************** I N F O ****************
-// **************************************************
 
-#info {
-    background: url(/images/background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--white);
-    padding: 120px 80px;
-    margin-top: 5rem;
 
-    h2 {
-        font-family: 'balooBold';
-        font-size: 40px;
+#info { background: url(/images/background.png); background-position: center; background-repeat: no-repeat; background-size: cover; color: var(--white); padding: 120px 80px; margin-top: 5rem;
+
+    h2 { font-family: 'balooBold'; font-size: 40px;
     }
 
-    .wrapper {
-        display: flex;
-        font-family: 'balooBold';
-        gap: 100px;
+    .wrapper { display: flex; font-family: 'balooBold'; gap: 100px;
 
         p {
             font-size: 20px;
@@ -392,9 +162,6 @@ footer {
     text-align: center;
 }
 
-// **********************************************************
-// **************** M E D I A  Q U E R I E S ****************
-// **********************************************************
 
 @media only screen and (max-width:1200px) {
     #about {
